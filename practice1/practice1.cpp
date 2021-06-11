@@ -1,23 +1,12 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int num, sum;
-    sum = 0;
-    cout << "科目1の点数を入力してください\n";
-    cin >> num;
-    sum += num;
-    cout << "科目2の点数を入力してください\n";
-    cin >> num;
-    sum += num;
-    cout << "科目3の点数を入力してください\n";
-    cin >> num;
-    sum += num;
-    cout << "科目4の点数を入力してください\n";
-    cin >> num;
-    sum += num;
-    cout << "科目5の点数を入力してください\n";
-    cin >> num;
-    sum += num;
-    cout << sum << "\n";
-    return 0;
+	int num = 1;
+	while (num) { //whileの条件が省略されている。num=1なので、num =0（偽であるとき）繰り返しが終了する。
+		cout << "整数を入力してください\n";
+		cin >> num;
+		cout << num << "が入力されました\n";
+	}
+	cout << "繰り返しが終わりました\n";
+	return 0;
 }
