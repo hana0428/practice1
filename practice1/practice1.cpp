@@ -1,12 +1,23 @@
 #include <iostream>
 using namespace std;
-int main() {
-	int num = 1;
-	while (num) { //whileの条件が省略されている。num=1なので、num =0（偽であるとき）繰り返しが終了する。
-		cout << "整数を入力してください\n";
-		cin >> num;
-		cout << num << "が入力されました\n";
-	}
-	cout << "繰り返しが終わりました\n";
+
+inline int square(int x) {return x * x;}	// プロトタイプ宣言 
+inline double square(double y) {return y * y;}
+int main(void)
+{
+	int name1, ans1;
+	double name2, ans2;
+
+	cout << "整数を入力してください\n";
+	cin >> name1;
+	ans1 = square(name1);
+	cout << name1 << "の二乗は" << ans1 << "です\n";
+
+	cout << "実数を入力してください\n";
+	cin >> name2;
+	ans2 = square(name2);
+	cout << name2 << "の二乗は" << ans2 << "です\n";
 	return 0;
 }
+
+
